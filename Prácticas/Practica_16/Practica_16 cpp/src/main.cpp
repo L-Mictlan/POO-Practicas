@@ -1,12 +1,12 @@
 #include <iostream>
-#include "QuickSort.h"
+#include "BubbleSort.h"
 #include "Sorter.h"
 
 int main() {
-    std::vector<int> data = {8, 3, 1, 7, 0, 10, 2};
+    std::vector<int> data = {5, 2, 9, 1, 5, 6};
 
-    QuickSort quickSort;
-    Sorter sorter(&quickSort);
+    BubbleSort bubble;
+    Sorter sorter(&bubble);
 
     std::vector<int> sorted = sorter.sort(data);
 
