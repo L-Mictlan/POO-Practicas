@@ -1,0 +1,21 @@
+{
+    "Basicos": {
+        "Numero": 7,
+        "Decimal": 1.9
+    },
+    "ArregloNormal": [
+        7,
+        8,
+        9
+    ],
+    "ArregloDinamico": [
+        10,
+        11,
+        12
+    ],
+    "Alumno": {
+        "Nombre": "Carlos",
+        "Edad": 19,
+        "Promedio": 8.7
+    }
+}

@@ -1,0 +1,19 @@
+<Datos>
+  <Numero>10</Numero>
+  <Decimal>3.14</Decimal>
+  <ArregloNormal>
+    <Elemento>1</Elemento>
+    <Elemento>2</Elemento>
+    <Elemento>3</Elemento>
+  </ArregloNormal>
+  <ArregloDinamico>
+    <Elemento>5</Elemento>
+    <Elemento>6</Elemento>
+    <Elemento>7</Elemento>
+  </ArregloDinamico>
+  <Alumno>
+    <Nombre>Juan</Nombre>
+    <Edad>20</Edad>
+    <Promedio>9.5</Promedio>
+  </Alumno>
+</Datos>
