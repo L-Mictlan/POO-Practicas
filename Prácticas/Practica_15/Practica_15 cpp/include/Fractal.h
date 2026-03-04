@@ -2,6 +2,7 @@
 #define FRACTAL_H
 
 #include <string>
+#include <vector>
 
 class Fractal {
 public:
@@ -12,7 +13,7 @@ public:
     void cantor(int nivel);
 
 private:
-    void sierpinskiRec(int nivel, std::string espacio);
+    void dibujarSierpinski(std::vector<std::string>& canvas, int x, int y, int size);
     void cantorRec(int nivel, std::string linea);
 };
 

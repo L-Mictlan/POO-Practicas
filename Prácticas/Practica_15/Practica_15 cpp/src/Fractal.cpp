@@ -1,23 +1,41 @@
 #include "Fractal.h"
 #include <iostream>
+#include <vector>
+#include <cmath>
 
 // ================= TRIÁNGULO DE SIERPINSKI =================
 
 void Fractal::sierpinski(int nivel) {
-    sierpinskiRec(nivel, "");
+    int altura = pow(2, nivel);
+    int ancho = 2 * altura - 1;
+
+    std::vector<std::string> canvas(altura, std::string(ancho, ' '));
+
+    dibujarSierpinski(canvas, 0, altura - 1, altura);
+
+    for (const auto& fila : canvas) {
+        std::cout << fila << std::endl;
+    }
 }
 
-void Fractal::sierpinskiRec(int nivel, std::string espacio) {
-    if (nivel == 0) {
-        std::cout << espacio << "*\n";
+void Fractal::dibujarSierpinski(std::vector<std::string>& canvas,
+                                int x, int y, int size) {
+    if (size == 1) {
+        canvas[x][y] = '*';
         return;
     }
 
-    sierpinskiRec(nivel - 1, espacio + " ");
-    sierpinskiRec(nivel - 1, espacio + "* ");
+    int mitad = size / 2;
+
+    // Arriba
+    dibujarSierpinski(canvas, x, y, mitad);
+
+    // Abajo izquierda
+    dibujarSierpinski(canvas, x + mitad, y - mitad, mitad);
+
+    // Abajo derecha
+    dibujarSierpinski(canvas, x + mitad, y + mitad, mitad);
 }
-
-
 // ================= POLVO DE CANTOR =================
 
 void Fractal::cantor(int nivel) {
